@@ -1,6 +1,8 @@
 
-export const AddToCartButton = () => {
+export const AddToCartButton = ({addToCart, product}) => {
     return(
-        <button>Dodaj do koszyka</button>
+        
+        <button onClick={()=> addToCart(product)}>Add to cart</button>
+        
     )
 }

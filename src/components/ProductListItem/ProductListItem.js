@@ -1,24 +1,23 @@
 import { AddToCartButton } from "../AddToCartButton/AddToCartButton";
 
-const ProductListItem = ({product}) => {
+const ProductListItem = ({product, addToCart}) => {
 
 
     return ( 
-        <div className="product-list-item-container">
-            <div>
-                <p>{product.title}</p>
-                <p>{product.description}</p>
-                <p>{product.price}</p>
-                <div className="images">
-                    <img src={product.images[0]}></img>
-                    <img src={product.images[1]}></img>
-                    <img src={product.images[2]}></img>
-                    <img src={product.images[3]}></img>
+            <div className="item-container">
+                <div className="item-details-container">
+
+                    <div className="image-container">
+                        <img src={product.images[0]}></img>
+                    </div>
+
+                    <div className="name">{product.title}</div>
+                    <div className="description">{product.description}</div>
+                    <div className="price">{`${product.price} $`}</div>
+                    
                 </div>
-            </div>
 
-            <AddToCartButton />
-
+                <AddToCartButton addToCart={addToCart} product={product}/>
         </div>
      );
 }

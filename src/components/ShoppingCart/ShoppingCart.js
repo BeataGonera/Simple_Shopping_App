@@ -1,10 +1,16 @@
-import { ShoppingCartItem } from "../ShoppingCartItem/ShoppingCartItem"
 
-export const ShoppingCart = ({cart}) => {
+export const ShoppingCart = ({cartItems}) => {
 
     return (
         <div>
-            <ShoppingCartItem cart = {cart} />
+            {cartItems.map((item) => (
+            <div className="shopping-cart-item">
+                {item.product.title} - {item.counter}
+                <button>Remove</button>
+            </div>
+      
+    ))}
+
         </div>
     )
 }

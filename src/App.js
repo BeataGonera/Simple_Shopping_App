@@ -9,15 +9,20 @@ import products from './data/products';
 function App() {
 
   const [view, setView] = useState("LIST")
-  const [cart, setCart] = useState([])
+  const [cartItems, updateCartItems] = useState([])
 
 
-  const addToCart = (products) => {
-    
-    
+  const addToCart = (product) => {
+
+    let item = cartItems.find((item) => item.product.id === product.id)
+    if(item){
+      item.counter++
+    }else{
+      item = { product:product, counter:1 }
+      updateCartItems([...cartItems, item])
+    }
   }
-
-
+    
   return (
     <div className="app">
 
@@ -28,19 +33,19 @@ function App() {
 
       {view === "LIST" && (
         <div> 
-          <h1>Lista produktów</h1>
-          <div><ProductList /></div>
+          <h1>List of products</h1>
+          <div><ProductList addToCart={addToCart} products={products}/></div>
         </div>
       )}
       {view === "CART" && (
         <div>
-          <h1>Koszyk</h1>
-          <div><ShoppingCart /></div>
+          <h1>Cart</h1>
+          <div><ShoppingCart cartItems = {cartItems}/></div>
         </div>
       )}
       {view === "NEW_PRODUCT" && (
         <div>
-          <h1>Dodaj produkt</h1>
+          <h1>Add new product</h1>
           <AddForms />
         </div>
       )}
@@ -49,5 +54,4 @@ function App() {
 }
 
 export default App;
-
 

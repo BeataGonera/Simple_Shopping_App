@@ -1,89 +1,60 @@
 .app {
-  text-align: center;
+padding: 5vh; 
+box-sizing: border-box; 
 }
 
-.app-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.products-list-container{
 
-.product-list-item-container{
-  margin: auto;
   display: flex;
-  align-items: center;
-  width: 1000px;
-  justify-content: flex-end;
-  gap: 50px;
-}
-
-.item{
-  border: 1px solid teal;
-}
-
-.images {
-  display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
+
+}
+
+.item-container{
+
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30vw;
+  height: 50vh;  
+  border: 3px solid orange;
+  border-radius: 10px;
+}
+
+.image-container{
+  display:flex;
+  justify-content: center;
+}
+
+.name{
+  color: teal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.description{
+
 }
 
 img{
-  height: 100px;
+  height: 150px;
+  margin-bottom: 20px;
 }
 
 button{
-  width: 100px;
-  height: 50px;
-  
-}
-
-.shopping-cart-item{
-
-  width: 400px;
-  height: 100px;
-  background: fuchsia;
-  margin: auto;
-
-}
-
-form {
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  gap: 20px;
-  width: 200px;
-  
-
-
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .app-logo {
-    animation: app-logo-spin infinite 20s linear;
-  }
-}
-
-.app-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: teal;
   color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
-.app-link {
-  color: #61dafb;
-}
 
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

@@ -15,6 +15,7 @@ export const AddForms = () => {
             <label for="name">Add a new product</label>
             <input 
                 type="text" 
+                id="name"
                 placeholder="iPhone"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
