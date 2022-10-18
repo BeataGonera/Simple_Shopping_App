@@ -1,6 +1,8 @@
 import { AddToCartButton } from "../AddToCartButton/AddToCartButton";
 
 const ProductListItem = ({product}) => {
+
+
     return ( 
         <div className="product-list-item-container">
             <div>
@@ -15,7 +17,7 @@ const ProductListItem = ({product}) => {
                 </div>
             </div>
 
-            <AddToCartButton/>
+            <AddToCartButton />
 
         </div>
      );
