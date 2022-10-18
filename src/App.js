@@ -25,10 +25,12 @@ function App() {
     
   return (
     <div className="app">
-
-    <button onClick={() => (setView("LIST"))}>Products</button>
-    <button onClick={() => (setView("CART"))}>Cart</button>
-    <button onClick={() => (setView("NEW_PRODUCT"))}>New product</button>
+    
+    <div className='nav'>
+      <button onClick={() => (setView("LIST"))}>Products</button>
+      <button onClick={() => (setView("CART"))}>Cart</button>
+      <button onClick={() => (setView("NEW_PRODUCT"))}>New product</button>
+    </div>
 
 
       {view === "LIST" && (

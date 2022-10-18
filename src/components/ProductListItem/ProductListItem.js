@@ -13,11 +13,13 @@ const ProductListItem = ({product, addToCart}) => {
 
                     <div className="name">{product.title}</div>
                     <div className="description">{product.description}</div>
-                    <div className="price">{`${product.price} $`}</div>
                     
                 </div>
 
+            <div className="price-and-button-container">
+                <div className="price">{`${product.price} $`}</div>
                 <AddToCartButton addToCart={addToCart} product={product}/>
+            </div>
         </div>
      );
 }
